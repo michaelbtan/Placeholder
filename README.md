@@ -196,7 +196,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |Nov 11| Adding the API | Getting all the Information From API | Rending all of the information and images | Incomplete
 |Nov 12| Adding the favorting function | Incomplete
 |Nov 13| MVP | Incomplete
-|Nov 14| Presentations | Incomplete -->
+|Nov 14| Presentations | Incomplete
 <br><br>
 
 ## Priority Matrix
