@@ -146,7 +146,7 @@ The app will search a pokemon by name, and populate all the cards that ever rele
 ## Wireframes
 
 <!-- Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe. -->
-<img src="./imgs/wireframe.png" style=" width:700px ; height:500px " alt="wireframe />
+<img src="./imgs/wireframe.png" style=" width:700px ; height:500px " alt="wireframe" />
 <br><br>
 
 ### MVP/PostMVP
