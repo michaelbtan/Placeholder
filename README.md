@@ -10,7 +10,7 @@ Pokemon TCG Lookup Database/Pokedex
 ## Project Description
 
 <!-- Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality. -->
-The app will search a pokemon by name, and populate all the cards that ever released for that specific pokemon. Some of the data that will return include, the name of the pokemon(including any special "upgrades:) an image of the card, set, and year the set was produced
+The app will search a pokemon by name through the api, and populate all the cards that ever released for that specific pokemon. Some of the data that will return include, the name of the pokemon(including any special "upgrades") an image of the card, set, and year the set was produced
 <br><br>
 ## API and Data Sample
 
