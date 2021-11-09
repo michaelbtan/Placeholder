@@ -21,12 +21,7 @@ randomPokemon.addEventListener("click", (e) => {
   removeEntries()
   let randomPIndex = Math.floor(Math.random() * 899)
   console.log(randomPIndex)
-  // const arr = userPokemon.split(" ");
-  // for (let i = 0; i < arr.length; i++) {
-  //   arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
-  // }
-  // const userPokemon2 = arr.join(" ");
-  // cardTitle.innerText = `${userPokemon2} Cards`;
+  cardTitle.innerText = `National Pokedex #${randomPIndex}`;
   getPokemonRandom(randomPIndex)
 })
 
