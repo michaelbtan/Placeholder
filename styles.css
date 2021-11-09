@@ -1,7 +1,7 @@
 body {
   text-align: center;
-  /* background: linear-gradient(90deg, rgba(205,66,63,1) 0%, rgba(25,11,13,0.3841911764705882) 35%, rgba(201,191,195,0.8883928571428571) 97%); */
-  background: url("https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg")
+  background: url("http://wallpoper.com/images/00/34/02/10/pokemon-latias_00340210.png");
+  background-size: 100% auto;
 }
 
 nav {
@@ -22,4 +22,9 @@ footer {
 
 button {
   border-radius: 25px;
+}
+
+.home-button {
+  display: flex;
+  justify-content: flex-end;
 }
