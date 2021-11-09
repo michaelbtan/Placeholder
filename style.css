@@ -8,7 +8,8 @@ body {
 }
 
 .dark-theme {
-  background: url("https://cdna.artstation.com/p/assets/images/images/014/379/714/large/obi-w-s.jpg?1543747273&dl=1")
+  background: url("https://cdna.artstation.com/p/assets/images/images/014/379/714/large/obi-w-s.jpg?1543747273&dl=1");
+  color: white;
 }
 
 header {
@@ -35,6 +36,10 @@ header li a {
 
 h1 {
   font-family: 'Press Start 2P', cursive;
+}
+
+h1 .dark-theme {
+  color:white;
 }
 
 h4 {
