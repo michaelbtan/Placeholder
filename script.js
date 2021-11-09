@@ -1,25 +1,11 @@
-async function getPokemon(pokemonName) {
-  const url = `https://api.pokemontcg.io/v2/cards?q=name:${pokemonName}`
-  // console.log(url)
-  try {
-    const res = await axios.get(url)
-    // console.log(res)
-    const cardData = await res.data.data
-    renderPokemon(cardData);
-    // console.log(cardData)
-  }
-  catch (error) {
-    console.log(error)
-    alert(`${pokemonName} is not a pokemon`)
-  }
-}
-
 const userInput = document.querySelector("#blank");
 const searchButton = document.querySelector("#search");
 const cardList = document.querySelector(".card-list");
 const cardTitle = document.querySelector("#card-title");
 const dayNightToggle = document.querySelector("#toggle-button")
+const randomPokemon = document.querySelector("#random")
 
+// Night Mode
 dayNightToggle.addEventListener("click", (e) => {
   dayORNight();
 });
@@ -29,7 +15,58 @@ function dayORNight() {
   theme.classList.toggle("dark-theme");
 }
 
+// Click button for random pokemon
+randomPokemon.addEventListener("click", (e) => {
+  e.preventDefault()
+  removeEntries()
+  let randomPIndex = Math.floor(Math.random() * 899)
+  console.log(randomPIndex)
+  // const arr = userPokemon.split(" ");
+  // for (let i = 0; i < arr.length; i++) {
+  //   arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+  // }
+  // const userPokemon2 = arr.join(" ");
+  // cardTitle.innerText = `${userPokemon2} Cards`;
+  getPokemonRandom(randomPIndex)
+})
 
+//search for random pokemon by number
+async function getPokemonRandom(nationalPokedexNumbers) {
+  const url = `https://api.pokemontcg.io/v2/cards?q=nationalPokedexNumbers:${nationalPokedexNumbers}`
+  try {
+    const res = await axios.get(url)
+    console.log(res)
+    const cardData = await res.data.data
+    renderPokemon(cardData);
+    console.log(cardData)
+  }
+  catch (error) {
+    console.log(error)
+    alert(`${pokemonName} is not a pokemon`)
+  }
+}
+
+
+
+
+// API Stuff
+async function getPokemon(pokemonName) {
+  const url = `https://api.pokemontcg.io/v2/cards?q=name:${pokemonName}`
+  // console.log(url)
+  try {
+    const res = await axios.get(url)
+    console.log(res)
+    const cardData = await res.data.data
+    renderPokemon(cardData);
+    console.log(cardData)
+  }
+  catch (error) {
+    console.log(error)
+    alert(`${pokemonName} is not a pokemon`)
+  }
+}
+
+// Search Functionality
 searchButton.addEventListener("click", (e) => {
   e.preventDefault()
   removeEntries()
@@ -43,10 +80,12 @@ searchButton.addEventListener("click", (e) => {
   getPokemon(userPokemon2)
 })
 
+// Remove Previous Inputs
 function removeEntries() {
   cardList.innerHTML = ''
 }
 
+// Render Pokemon Cards
 function renderPokemon(pokemonData) {
   pokemonData.forEach((pokemon) => {
     console.log(pokemon)
