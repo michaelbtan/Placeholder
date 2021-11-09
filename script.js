@@ -40,16 +40,13 @@ function removeEntries() {
 function renderPokemon(pokemonData) {
   pokemonData.forEach((pokemon) => {
     console.log(pokemon)
-    const cardPic = document.createElement("img");
-    //     const cardYear = document.createElement("h4");
-    //     // cardList.createElement("div")
-
-    cardPic.src = pokemon.images.small;
-    cardList.appendChild(cardPic);
-
-    // cardYear.innerText = pokemon.Year;
-    // cardList.appendChild(cardYear);
-
+    const largeCardPic = document.createElement("a");
+    const smallCardButton = document.createElement("img");
+    largeCardPic.setAttribute('target', '_blank');
+    largeCardPic.href = pokemon.images.large;
+    smallCardButton.src = pokemon.images.small;
+    largeCardPic.appendChild(smallCardButton);
+    cardList.appendChild(largeCardPic);
   }
   )
 }
