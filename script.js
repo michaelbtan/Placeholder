@@ -18,6 +18,16 @@ const userInput = document.querySelector("#blank");
 const searchButton = document.querySelector("#search");
 const cardList = document.querySelector(".card-list");
 const cardTitle = document.querySelector("#card-title");
+const dayNightToggle = document.querySelector("#toggle-button")
+
+dayNightToggle.addEventListener("click", (e) => {
+  dayORNight();
+});
+
+function dayORNight() {
+  let theme = document.querySelector("body");
+  theme.classList.toggle("dark-theme");
+}
 
 
 searchButton.addEventListener("click", (e) => {
@@ -50,3 +60,4 @@ function renderPokemon(pokemonData) {
   }
   )
 }
+
