@@ -23,6 +23,7 @@ randomPokemon.addEventListener("click", (e) => {
   console.log(randomPIndex)
   cardTitle.innerText = `National Pokedex #${randomPIndex}`;
   getPokemonRandom(randomPIndex)
+  userInput.innerText = " "
 })
 
 //search for random pokemon by number
