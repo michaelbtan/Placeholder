@@ -42,9 +42,7 @@ async function getPokemonRandom(nationalPokedexNumbers) {
 }
 
 
-
-
-// API Stuff
+// Search for pokemon by name
 async function getPokemon(pokemonName) {
   const url = `https://api.pokemontcg.io/v2/cards?q=name:${pokemonName}`
   // console.log(url)

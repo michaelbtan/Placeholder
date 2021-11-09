@@ -237,13 +237,22 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 ## Code Snippet
 
-<!-- Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+dayNightToggle.addEventListener("click", (e) => {
+  dayORNight();
+});
+
+function dayORNight() {
+  let theme = document.querySelector("body");
+  theme.classList.toggle("dark-theme");
 }
-``` -->
+```
 
 ## Change Log
  <!-- Use this section to document what changes were made and the reasoning behind those changes.   -->
+ v1.0 added html
+ v1.1 added css
+ v1.2 added search functionality
+ v1.3 added buttons to the nav bar
+ v2.0 added a night mode
+ v3.0 added a random pokemon feature
