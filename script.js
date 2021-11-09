@@ -1,13 +1,11 @@
-const API_KEY = "https://api.pokemontcg.io/v2/cards"
-
 async function getPokemon(pokemonName) {
-  const url = `https://api.pokemontcg.io/v2/cards?name=${pokemonName}`
+  const url = `https://api.pokemontcg.io/v2/cards?q=name:${pokemonName}`
   console.log(url)
   try {
-    const result = await axios.get(url)
-    console.log(result)
-    const cardData = result.data.name
-    renderList(cardData);
+    const res = await axios.get(url)
+    console.log(res)
+    const cardData = await res.data.data
+    renderPokemon(cardData);
     console.log(cardData)
   }
   catch (error) {
@@ -16,37 +14,30 @@ async function getPokemon(pokemonName) {
   }
 }
 
-getPokemon(piplup)
-
 const userInput = document.querySelector("#blank");
 const searchButton = document.querySelector("#search");
 const cardList = document.querySelector(".card-list");
 
-// searchButton.addEventListener("click", (e) => {
-//   e.preventDefault()
-//   //delete previous
-//   let userPokemon = userInput.value
-//   renderPokemon(userPokemon)
-// })
+searchButton.addEventListener("click", (e) => {
+  e.preventDefault()
+  //delete previous
+  let userPokemon = userInput.value
+  getPokemon(userPokemon)
+})
 
-// function renderPokemon(pokemonData) {
-//   pokemonData.forEach((pokemon) => {
-//     console.log(pokemon)
-//     //     const pokemonName = document.createElement("h2");
-//     const cardPic = document.createElement("img");
-//     //     const cardYear = document.createElement("h4");
-//     //     // listMovies.createElement("div")
+function renderPokemon(pokemonData) {
+  pokemonData.forEach((pokemon) => {
+    console.log(pokemon)
+    const cardPic = document.createElement("img");
+    //     const cardYear = document.createElement("h4");
+    //     // listMovies.createElement("div")
 
-//     //     pokemonName.innerText = pokemon.Name;
-//     //     listMovies.appendChild(movieTitle);
+    cardPic.src = pokemon.images.small;
+    cardList.appendChild(cardPic);
 
-//     cardPic.src = pokemon.Picture;
-//     listMovies.appendChild(cardPic);
+    // cardYear.innerText = pokemon.Year;
+    // listMovies.appendChild(cardYear);
 
-    //     cardYear.innerText = pokemon.Year;
-    //     listMovies.appendChild(cardYear);
-
-    //     console.log(listMovies)
-//   }
-//   )
-// }
+  }
+  )
+}
