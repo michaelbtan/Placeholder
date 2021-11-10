@@ -101,6 +101,8 @@ function renderPokemon(pokemonData) {
     largeCardPic.href = pokemon.images.large;
     smallCardButton.src = pokemon.images.small;
     largeCardPic.appendChild(smallCardButton);
+    //Append just pic 
+    // cardList.appendChild(largeCardPic)
     divContainer.appendChild(largeCardPic);
 
     const set = document.createElement("h4")

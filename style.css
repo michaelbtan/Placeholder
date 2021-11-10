@@ -129,20 +129,14 @@ li:hover {
   background-color: black;
   border-radius: 10px;
 }
-/* .wrapper {
-  display: flex;
-  justify-content: center;
-}
 
-.flex {
-  /* display: flex;
-  justify-content: space-between;
-  flex-direction: row; */
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-} */ 
+.cardList {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+}
 
 #home-button {
   margin-left: 50px
@@ -151,6 +145,7 @@ li:hover {
 #footer-text {
   margin-bottom: 20px;
 }
+
 
 @media (max-width: 600px) {
   body {
