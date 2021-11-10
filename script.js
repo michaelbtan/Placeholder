@@ -5,6 +5,14 @@ const cardTitle = document.querySelector("#card-title");
 const dayNightToggle = document.querySelector("#toggle-button")
 const randomPokemon = document.querySelector("#random")
 
+const toggleButton = document.querySelector(".toggle-btn")
+const navBarLinks = document.querySelector("navbar-links")
+
+// Hamburger function
+toggleButton.addEventListener('click', () => {
+  navBarLinks.classList.toggle('active')
+})
+
 // Night Mode
 dayNightToggle.addEventListener("click", (e) => {
   dayORNight();
@@ -83,13 +91,26 @@ function removeEntries() {
 function renderPokemon(pokemonData) {
   pokemonData.forEach((pokemon) => {
     console.log(pokemon)
+    const divContainer = document.createElement("div")
+    divContainer.classList.add("flex")
+    cardList.appendChild(divContainer)
+
     const largeCardPic = document.createElement("a");
     const smallCardButton = document.createElement("img");
     largeCardPic.setAttribute('target', '_blank');
     largeCardPic.href = pokemon.images.large;
     smallCardButton.src = pokemon.images.small;
     largeCardPic.appendChild(smallCardButton);
-    cardList.appendChild(largeCardPic);
+    divContainer.appendChild(largeCardPic);
+
+    const set = document.createElement("h4")
+    set.innerText = pokemon.set.name
+    divContainer.appendChild(set)
+
+    // const prices = document.createElement("h4")
+    // prices.innerText = pokemon.tcgplayer.prices.normal
+    // cardList.appendChild(prices)
+
   }
   )
 }

@@ -20,24 +20,35 @@
 <body>
   <div class="main-container">
     <header>
-      <nav>
-        <li id="home-button"><a href="#top">Home</a></li>
-        <li id="toggle-button"><a href="#">Day/Night</a></li>
-        <li id="random"><a href="#">Random Pokemon</a></li>
+      <nav class="navbar">
+        <a href="" class="toggle-btn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li id="home-button"><a href="#top">Home</a></li>
+            <li id="toggle-button"><a href="#">Day/Night</a></li>
+            <li id="random"><a href="#">Random Pokemon</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <img id="#top" src="imgs/Poke_Ball.png" height="100px" width="100px" alt="pokeball">
-    <h1>The un-Official Pokemon TCG Pokedex</h1>
+    <h1>The Un-Official Pokemon TCG Pokedex</h1>
     <h4><i>Search for all your favorite Pokemon</i></h4>
     <div class="search-section">
       <input type="text" id="blank" placeholder="Collect'em All?" required>
       <button id="search">Search</button>
     </div>
     <h2 id="card-title" style="font-family: 'Roboto', sans-serif;"></h2>
-    <section class="card-list">
-    </section>
+    <div class="wrapper">
+      <section class="card-list">
+      </section>
+    </div>
     <footer>
-      <h4 id="footer-text">un-Affiliated 2021</h4>
+      <h4 id="footer-text">Un-Affiliated 2021</h4>
     </footer>
   </div>
 </body>
