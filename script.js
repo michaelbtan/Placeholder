@@ -28,7 +28,6 @@ randomPokemon.addEventListener("click", (e) => {
   e.preventDefault()
   removeEntries()
   let randomPIndex = Math.floor(Math.random() * 899)
-  console.log(randomPIndex)
   cardTitle.innerText = `National Pokedex #${randomPIndex}`;
   getPokemonRandom(randomPIndex)
   userInput.innerText = " "
@@ -39,10 +38,8 @@ async function getPokemonRandom(nationalPokedexNumbers) {
   const url = `https://api.pokemontcg.io/v2/cards?q=nationalPokedexNumbers:${nationalPokedexNumbers}`
   try {
     const res = await axios.get(url)
-    console.log(res)
     const cardData = await res.data.data
     renderPokemon(cardData);
-    console.log(cardData)
   }
   catch (error) {
     console.log(error)
@@ -57,10 +54,8 @@ async function getPokemon(pokemonName) {
   // console.log(url)
   try {
     const res = await axios.get(url)
-    console.log(res)
     const cardData = await res.data.data
     renderPokemon(cardData);
-    console.log(cardData)
   }
   catch (error) {
     console.log(error)
@@ -90,7 +85,6 @@ function removeEntries() {
 // Render Pokemon Cards
 function renderPokemon(pokemonData) {
   pokemonData.forEach((pokemon) => {
-    console.log(pokemon)
     const divContainer = document.createElement("div")
     divContainer.classList.add("flex")
     cardList.appendChild(divContainer)

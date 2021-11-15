@@ -220,20 +220,20 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Searchbar | H | 3hrs| 3hrs | hrs |
-| Working with API | H | 3hrs| 3hrs | hrs |
-| Store the User Inputs  | H | 3hrs| 3hrs | hrs |
-| Find the name of the pokemon | H | 3hrs| 3hrs | hrs |
-| Find the set | H | 3hrs| 3hrs | hrs |
-| Find the production year for the set | H | 3hrs| 3hrs | hrs |
-| Render the text to the page | H | 3hrs| 3hrs | hrs |
-| Find the image for the set and pokemon | H | 3hrs| 3hrs | hrs |
-| Render the images to the page | H | 3hrs| 3hrs | hrs |
-| Remove Previous Entry | L | 3hrs| 3hrs | hrs |
-| Store Click for Favoriting | H | 3hrs| 3hrs | hrs |
+| Adding Searchbar | H | 3hrs| 3hrs | 2hrs |
+| Working with API | H | 3hrs| 3hrs | 2hrs |
+| Store the User Inputs  | H | 3hrs| 3hrs | 1hrs |
+| Find the name of the pokemon | H | 3hrs| 3hrs | 2hrs |
+| Find the set | H | 3hrs| 3hrs | 2hrs |
+| Find the production year for the set | H | 3hrs| 3hrs | 2hrs |
+| Render the text to the page | H | 3hrs| 3hrs | 1hrs |
+| Find the image for the set and pokemon | H | 3hrs| 3hrs | 2hrs |
+| Render the images to the page | H | 3hrs| 3hrs | 3hrs |
+| Remove Previous Entry | L | 3hrs| 3hrs | 1hrs |
+| Store Click for Favoriting | H | 3hrs| 3hrs | 1hrs |
 | Store Favorites on a List | L | 3hrs| 3hrs | hrs |
-| Adding the Flexbox | L | 3hrs| 3hrs | hrs |
-| Total | H | 39hrs| 39hrs | hrs | -->
+| Adding the Flexbox | L | 3hrs| 3hrs | 4hrs |
+| Total | H | 39hrs| 39hrs | 23hrs | -->
 
 ## Code Snippet
 
